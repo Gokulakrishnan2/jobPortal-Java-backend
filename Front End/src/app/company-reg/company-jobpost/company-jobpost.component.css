@@ -1,0 +1,43 @@
+.name{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: darkblue;
+    font-size: 30px;
+    margin-top: 25px;
+}
+.mail, .id{
+    text-align: center;
+    font-style: italic;
+    color: darkblue;
+    font-size: 20px;
+    margin-top: 20px;
+}
+h3{
+    text-align: center;
+    background-color: rgb(138, 188, 245);
+    margin:20px 470px 10px 470px;
+    padding: 15px ;
+    border-radius: 15px;
+}
+body{
+    margin-top: 50px;
+}
+.role{
+    margin-left: 530px;
+}
+.role1{
+    margin-left: 30px;
+}
+.desc{
+    margin-left: 500px;
+}
+.desc1{
+    margin-left: 10px;
+}
+.name-error{
+    margin-left: 175px;
+}
+.submit{
+    margin-left: 640px;
+}

@@ -1,0 +1,58 @@
+h3{
+    text-align: center;
+    background-color: rgb(138, 193, 245);
+    margin-top:0px;
+    padding: 20px ;
+}
+body{
+    margin-top: 50px;
+}
+.name{
+    margin-left: 500px;
+}
+.name1{
+    margin-left: 63px;
+}
+.email{
+    margin-left: 500px;
+}
+.email1{
+    margin-left: 67px;
+}
+.phone-no{
+    margin-left: 500px;
+}
+.phone-no1{
+    margin-left: 7px;
+}
+.qualification{
+    margin-left: 500px;
+}
+.qualification1{
+    margin-left: 37px;
+    width:180px;
+}
+.degree{
+    margin-left: 500px;
+}
+.degree1{
+    margin-left: 127px;
+}
+.city{
+    margin-left: 500px;
+}
+.city1{
+    margin-left: 100px;
+}
+.address{
+    margin-left: 500px;
+}
+.address1{
+    margin-left: 17px;
+}
+.submit{
+    margin-left: 650px;
+}
+.name-error{
+    margin-left: 175px;
+}

@@ -1,0 +1,53 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reg.component.css">
+</head>
+<h3>User job-apply Details</h3>
+<body>
+    <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value, service.userApply.companyId, service.userApply.jobId)">
+        <p class="name">Candidate Name:
+            <input ngModel required #name="ngModel" pattern="[a-z A-z]+$" name="candidateName" id="Name" type="text" class="name1" placeholder="Enter your name">
+            <br>
+            <span *ngIf="name.invalid && name.touched && name.dirty" style="color:red ;" class="name-error">Please enter a valid name</span>
+        </p>
+        <p class="email">Candidate Email:
+            <input ngModel #email="ngModel" pattern="[a-z0-9.]+@[a-z0-9.]+\.[a-z]{2,}$" name="candidateEmail" id="Email" type="email" class="email1" placeholder="abc@gmail.com" required>
+            <br>
+            <span *ngIf="email.invalid && email.touched && email.dirty" style="color:red ;" class="name-error">Please enter a valid Mail id</span>
+        </p>
+        <p class="phone-no">Candidate Phone Number:
+            <input ngModel #phoneno1="ngModel" pattern="[0-9]{10}" name="candidatePhone" id="phone-no" type="numbers" class="phone-no1" placeholder="Enter 10 digit number" required>
+            <br>
+            <span *ngIf="phoneno1.invalid && phoneno1.touched && phoneno1.dirty" style="color:red ;" class="name-error">Please enter a valid number</span>
+        </p>
+        <p class="qualification">Highest Qualification:
+            <select ngModel #type="ngModel" name="highestQualification" id="qualification" class="qualification1" required>
+                <option value="" disabled selected>Select any option</option>
+                <option value="SSLC">SSLC</option>
+                <option value="HSC">HSC</option>
+                <option value="Diploma">Diploma</option>
+                <option value="UG">UG</option>
+                <option value="PG">PG</option>
+            </select>
+            <br>
+            <span *ngIf="type.invalid && type.touched && type.dirty" style="color:red ;" class="name-error">Please enter a valid input</span>
+        </p>
+        <p class="degree">Degree:
+            <input ngModel #degree="ngModel" pattern="[a-z A-z]+$" name="Degree" id="degree" type="text" class="degree1" placeholder="Ex. BE, MCA" required>
+            <br>
+            <span *ngIf="degree.invalid && degree.touched && degree.dirty" style="color:red ;" class="name-error">Please enter a valid input</span>
+        </p>
+        <p class="address">Communication address:
+            <textarea ngModel class="address1" name="communicationAddress" id="address" cols="20" rows="5" maxlength="100" placeholder="Enter your address" required></textarea>
+        </p>
+        <p class="city">Current city:
+            <input ngModel #city="ngModel" pattern="[a-z A-z]+$" name="currentCity" id="city" type="text" class="city1" placeholder="Ex. Chennai" required>
+            <br>
+            <span *ngIf="city.invalid && city.touched && city.dirty" style="color:red ;" class="name-error">Please enter a valid input</span>
+        </p>
+        
+        <button [disabled]="simpleForm.invalid" type="submit" class="submit">Submit</button>
+       
+    </form>
+</body>
+

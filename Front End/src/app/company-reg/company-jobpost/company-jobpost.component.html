@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="company-jobpost.component.css">
+</head>
+<p class="name">Welcome, {{service.mydata.responseObject.data.companyName}}!</p>
+<!-- <p class="mail">Your mail:{{service.mydata.responseObject.data.companyEmail}}</p>
+<p class="id">Your id:{{service.mydata.responseObject.data}}</p> -->
+<h3>Company Job post</h3>
+<body>
+    
+    <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value, service.mydata.responseObject.data)">
+        
+        <p class="role">Job role:
+            <input ngModel #role="ngModel" pattern="[a-z A-z 0-9]+$" name="jobRole" id="role" type="role" class="role1" placeholder="Ex. Software Developer" required>
+            <br>
+            <span *ngIf="role.invalid && role.touched && role.dirty" style="color:red ;" class="name-error">Please enter a valid input</span>
+        </p>
+        <p class="desc">Job Description:
+            <textarea ngModel class="desc1" name="jobDescription" id="desc" cols="20" rows="5" maxlength="500" placeholder="Type Job Description" required></textarea>
+        </p>
+        
+        <br>
+        <button [disabled]="simpleForm.invalid" type="submit" class="submit">
+           Submit
+        </button>
+       
+    </form>
+</body>
